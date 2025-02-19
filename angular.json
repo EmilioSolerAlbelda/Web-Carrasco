@@ -16,29 +16,30 @@
             "outputPath": "dist/carrasco",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
-                "input": "src/assets",
-                "output": "assets/"
+                "input": "src/assets/imagenes",
+                "output": "assets/imagenes"
+              },
+              {
+                "glob": "**/*.{png,jpg,jpeg,gif,svg,webp}",
+                "input": "src/assets/libros",
+                "output": "assets/libros"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
             "server": "src/main.server.ts",
             "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "ssr": { "entry": "src/server.ts" }
           },
           "configurations": {
             "production": {
@@ -54,12 +55,50 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/imagenes",
+                  "output": "assets/imagenes"
+                },
+                {
+                  "glob": "**/*.{png,jpg,jpeg,gif,svg,webp}",
+                  "input": "src/assets/libros",
+                  "output": "assets/libros"
+                }
+              ],
+              "styles": [
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.css"
+              ],
+              "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "assets": [
+                "src/favicon.ico",
+                "src/assets",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets/imagenes",
+                  "output": "assets/imagenes"
+                },
+                {
+                  "glob": "**/*.{png,jpg,jpeg,gif,svg,webp}",
+                  "input": "src/assets/libros",
+                  "output": "assets/libros"
+                }
+              ],
+              "styles": [
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.css"
+              ],
+              "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
             }
           },
           "defaultConfiguration": "production"
@@ -67,12 +106,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "Carrasco:build:production"
-            },
-            "development": {
-              "buildTarget": "Carrasco:build:development"
-            }
+            "production": { "buildTarget": "Carrasco:build:production" },
+            "development": { "buildTarget": "Carrasco:build:development" }
           },
           "defaultConfiguration": "development"
         },
@@ -82,25 +117,27 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
-                "input": "src/assets",
-                "output": "assets/"
+                "input": "src/assets/imagenes",
+                "output": "assets/imagenes"
+              },
+              {
+                "glob": "**/*.{png,jpg,jpeg,gif,svg,webp}",
+                "input": "src/assets/libros",
+                "output": "assets/libros"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
           }
         }
       }

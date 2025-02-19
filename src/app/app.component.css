@@ -1,4 +1,4 @@
-/* ✅ Estilización del encabezado */
+
 .header {
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
  
 .logo {
     width: 180px;
-    margi
+    margin: 10px;
 }
   
   
