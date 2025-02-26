@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ⬅️ Aseguramos que sea standalone
-  imports: [NavbarComponent, RouterOutlet], // ⬅️ Importamos correctamente el Navbar y el RouterOutlet
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent { }
+export class AppComponent {}

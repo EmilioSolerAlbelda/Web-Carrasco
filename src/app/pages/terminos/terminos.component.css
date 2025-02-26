@@ -1,0 +1,50 @@
+.terminos-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #00aadcb3;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.terminos-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    color: #0087BE;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.terminos-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: #0087BE;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.terminos-container p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #000000; 
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.terminos-container {
+    max-width: 800px;
+    margin: 100px auto 40px auto; 
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #00aadcb3;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
